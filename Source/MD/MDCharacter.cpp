@@ -50,7 +50,7 @@ AMDCharacter::AMDCharacter()
 
 	//Initial Power level of character
 
-	InitialPower = 0.0f;
+	InitialPower = 250.0f;
 	CurrentPower = InitialPower;
 
 	InitialHealth = 2000.0f;
