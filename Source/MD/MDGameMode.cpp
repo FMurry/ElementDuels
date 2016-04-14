@@ -12,19 +12,8 @@ AMDGameMode::AMDGameMode()
 	static ConstructorHelpers::FClassFinder<APawn> ElectricPlayer(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacterElectric"));
 	static ConstructorHelpers::FClassFinder<APawn> FirePlayer(TEXT("/Game/ThirdPersonCPP/Blueprints/ThirdPersonCharacterFire"));
 
-	int32 RandomCharacter = FMath::FRandRange(0, 100);
-	UE_LOG(LogClass, Log, TEXT("Random number is %d"),RandomCharacter);
-
-	if (RandomCharacter%2 == 0) {
-		if (ElectricPlayer.Class != NULL) {
-			DefaultPawnClass = ElectricPlayer.Class;
-		}
-	}
-	else if (RandomCharacter%2 == 1) {
-		if (FirePlayer.Class != NULL) {
-			DefaultPawnClass = FirePlayer.Class;
-		}
-	}
+	DefaultPawnClass = NULL;
+	
 }
 
 void AMDGameMode::Tick(float DeltaTime) {

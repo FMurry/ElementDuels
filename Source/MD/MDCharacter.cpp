@@ -55,8 +55,8 @@ AMDCharacter::AMDCharacter()
 
 	InitialHealth = 2000.0f;
 	CurrentHealth = InitialHealth;
-	BaseSpeed = 150.0f;
-	SpeedFactor = 8.0f;
+	BaseSpeed = 600.0f;
+	SpeedFactor = 2.0f;
 
 	MaxHealth = 2000.0f;
 	MaxPower = 1000.0f;
